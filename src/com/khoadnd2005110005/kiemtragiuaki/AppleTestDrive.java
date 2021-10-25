@@ -20,22 +20,22 @@ public class AppleTestDrive {
        public void input()
        {
            System.out.println("Nhập Apple Mới:");
-           ID = scanner.nextInt();
+           idmoi = scanner.nextInt();
            System.out.println("Nhập Khối Lượng Apple:");
-           weight = scanner.nextFloat();
+           khoiluongmoi = scanner.nextFloat();
            scanner.nextLine();
            System.out.println("Nhập Màu Sắc Apple:");
-           color = scanner.nextLine();
+           mausacmoi = scanner.nextLine();
        }
        public void displayApple(){
             System.out.println("==========Apple========");
-            System.out.printf("%-20S %-20S %-20S\n","id applle", "weight apple", "color apple");
+            System.out.printf("%-20S %-20S %-20S\n","Mã Định Danh applle", "Khối Lượng apple", "Màu Sắc apple");
        }
        public void display()
        {
            for (Apple apple : lApple) {
                apple.displayApple();
-                System.out.printf("%-20d %-20.2f %-20S\n",ID, weight,color);
+                System.out.printf("%-20d %-20.2f %-20S\n",idmoi, khoiluongmoi,mausacmoi);
            }
            
        }
@@ -52,7 +52,7 @@ public class AppleTestDrive {
        }
        public void find()
        {
-           System.out.println("Input Color You Want Find:");
+           System.out.println("Nhập Màu Sắc Cần Tìm:");
            String name = scanner.nextLine();
            for (Apple apple : lApple) {
                if(name.equals(apple.color)){
