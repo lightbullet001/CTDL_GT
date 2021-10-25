@@ -1,5 +1,9 @@
 package com.khoadnd2005110005.kiemtragiuaki
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class AppleTestDrive {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
