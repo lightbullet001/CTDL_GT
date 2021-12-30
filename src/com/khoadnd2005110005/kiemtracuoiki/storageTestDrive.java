@@ -13,6 +13,38 @@ public class storageTestDrive {
         storage()
     {
 
+        System.out.println("CHƯƠNG TRÌNH QUẢN LÝ HÀNG HÓA");
+		System.out.println(">>>>>>>>>>>>>MENU<<<<<<<<<<<<<");
+		
+        Scanner scanner = new Scanner(System.in);
+		
+        int suLuaChon;
+		System.out.println("Lựa chọn Chức năng: ");
+		suLuaChon = scanner.nextInt();
+		ArrayList<storage>  = thucpham.storage(), sanhsu.storage(), dienmay.storage();
+		switch (suLuaChon) {
+		case 1:
+			them(storage);
+			break;
+
+		case 2:
+			timkiem(storage);
+			break;
+
+		case 3:
+			sapxep(storage);
+			break;
+
+		case 4:
+			hienthidanhsach(storageTestDrive);
+			break;
+
+		default:
+			System.out.println("Thử Lại");
+		}
+
+		scanner.close();
+	}
     }
 
        public void menu(){
@@ -23,6 +55,7 @@ public class storageTestDrive {
            System.out.println("=4======Danh Sách Hàng Đã Thêm==========");
            System.out.println("==============Thoát=============");
        }
+    
        
 
        public void displaystorage(){
