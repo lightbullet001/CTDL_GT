@@ -55,7 +55,7 @@ public class SapxepHangHoa {
 	static ArrayList<MatHang> sapxepngaynhapgiamdan(ArrayList<MatHang> danhsachhang) {
 		Collections.sort(danhsachhang, new Comparator<MatHang>() {
 
-			public int compare(HangHoa s1, HangHoa s2) {
+			public int compare(MatHang s1, MatHang s2) {
 				Date ngaynhapkhoS1 = chuyendoingay(s1.ngaynhapkho);
 				Date ngaynhapkhos2 = chuyendoingay(s2.ngaynhapkho);
 				if (ngaynhapkhoS1 == null || ngaynhapkhos2 == null) {

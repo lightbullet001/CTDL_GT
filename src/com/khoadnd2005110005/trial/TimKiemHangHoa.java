@@ -11,7 +11,7 @@ public class TimKiemHangHoa {
 
 	static MatHang timhanghoatheoten(String tenhanghoa, ArrayList<MatHang> danhsachhang) {
 		for (MatHang hangHoa : danhsachhang)
-			if (hangHoa.tenhanghoa.toLowerCase().equals(tenHangHoa.toLowerCase()))
+			if (hangHoa.tenhanghoa.toLowerCase().equals(tenhanghoa.toLowerCase()))
 				return hangHoa;
 		return null;
 	}
@@ -51,11 +51,11 @@ public class TimKiemHangHoa {
 
 	}
 
-	static MatHang timhanghoatheoma(int manhandang, ArrayList<MatHang> danhsachhang) {
+	static MatHang timhanghoatheoma(String manhandang, ArrayList<MatHang> danhsachhang) {
 		MatHang result = null;
-		for (MatHang hangHoa : danhsachhang
+		for (MatHang hangHoa : danhsachhang)
 
-			if (hangHoa.mahang.toLowerCase().equals(manhandang.toLowerCase())) {
+			if (hangHoa manhandang.toLowerCase().equals(manhandang.toLowerCase())) {
 				result = hangHoa;
 				break;
 			}

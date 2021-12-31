@@ -7,7 +7,7 @@ import com.khoadnd2005110005.trial.MatHang;
 public class ThongKeMatHang {
 	static int thongketongsoluonghanghoa(ArrayList<MatHang> danhsachhang) {
 		int tongsoluong = 0;
-		for (MatHang hangHoa : danhsachhang
+		for (MatHang hangHoa : danhsachhang)
 			tongsoluong = tongsoluong + hangHoa.soluongtonkho;
 		}
 		return tongsoluong;
@@ -16,7 +16,7 @@ public class ThongKeMatHang {
 	static double thongketonggiatrihanghoa(ArrayList<MatHang> danhsachhang) {
 		double tonggiatri = 0;
 		for (MatHang hangHoa : danhsachhang) {
-			tonggiatri = tonggiatri + (hangHoa.gianhap * hangHoa.soluongtonkho);
+			tonggiatri = tonggiatri + (hangHoa.gianhapkho * hangHoa.soluongtonkho);
 		}
 		return tonggiatri;
 

@@ -31,7 +31,7 @@ public class PhanMemQuanLy {
 		ArrayList<MatHang> danhsachhang = Data.danhsachhanghoa();
 		switch (suLuaChon) {
 		case 1:
-			them(danhsachhang)
+			them(danhsachhang);
 			break;
 		case 2:
 			xoahanghoa(danhsachhang);
@@ -163,7 +163,7 @@ public class PhanMemQuanLy {
 		System.out.print("-Loại hàng hóa: ");
 		loai = scanner.nextLine();
 
-		int manhandang;
+		String manhandang;
 		System.out.print("-Mã Nhận Dạng: ");
 		manhandang = scanner.nextLine();
 
@@ -261,7 +261,7 @@ public class PhanMemQuanLy {
 		ArrayList<MatHang> dsTimkiem = TimKiemHangHoa.timhanghoatheoloai(loai, danhsachhang);
 		if (!dsTimkiem.isEmpty()) {
 			System.out.println("Đã tìm thấy hàng hóa theo loại nhập " + loai);
-			for (HangHoa hangHoa : dsTimkiem)
+			for (MatHang hangHoa : dsTimkiem)
 				System.out.println(hangHoa.loai + " - " + hangHoa.manhandang + " - " + hangHoa.tenhanghoa + " - "
 						+ hangHoa.gianhapkho + " - " + hangHoa.soluongtonkho);
 		} else
@@ -305,7 +305,7 @@ public class PhanMemQuanLy {
 			System.out.println("Không tìm thấy hàng hóa cần tìm ");
 		} else {
 			System.out.println("Đã tìm thấy hàng hóa theo ngày vừa nhập " + ngaynhapkho);
-			for (HangHoa hangHoa : dsKetqua) {
+			for (MatHang hangHoa : dsKetqua) {
 				System.out.println(hangHoa.loai + " - " + hangHoa.manhandang + " - " + hangHoa.tenhanghoa + " - "
 						+ hangHoa.gianhapkho + " - " + hangHoa.soluongtonkho + " - " + hangHoa.ngaynhapkho);
 			}
@@ -318,9 +318,9 @@ public class PhanMemQuanLy {
 	static void timkiemtheoma(ArrayList<MatHang> danhsachhang) {
 		System.out.println("Bắt đầu chức năng tìm kiếm theo mã");
 		Scanner scanner = new Scanner(System.in);
-		int manhandang;
+		String manhandang;
 		System.out.println("Nhập mã hàng hóa cần tìm: ");
-		mahang = scanner.nextLine();
+		manhandang = scanner.nextLine();
 		MatHang hangHoa = TimKiemHangHoa.timhanghoatheoma(manhandang, danhsachhang);
 		if (hangHoa != null) {
 			System.out.println(hangHoa.loai + " - " + hangHoa.manhandang + " - " + hangHoa.tenhanghoa + " - "
@@ -404,7 +404,7 @@ public class PhanMemQuanLy {
 //=======================sắp xếp ngày giảm====================
 	static void sapxepngaynhapgiamdan(ArrayList<MatHang> danhsachhang) {
 		System.out.println("Danh sách hàng hóa sau khi xắp xếp ngày nhập giảm dần");
-		ArrayList<MatHang> dsSapxep = Sapxep.sapxepngaynhapgiamdan(danhsachhang);
+		ArrayList<MatHang> dsSapxep = SapxepHangHoa.sapxepngaynhapgiamdan(danhsachhang);
 		for (MatHang hangHoa : dsSapxep) {
 			System.out
 					.println("Hang hoa: " + hangHoa.tenhanghoa + " - " + hangHoa.gianhapkho + " - " + hangHoa.ngaynhapkho);
@@ -417,7 +417,7 @@ public class PhanMemQuanLy {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Loại hàng hóa cần sắp xếp là: ");
 		String loai = scanner.nextLine();
-		ArrayList<MatHang> dstimkiem = TimKiemHangHoa.timhanghoatheoloai(loai, danhsachhang
+		ArrayList<MatHang> dstimkiem = TimKiemHangHoa.timhanghoatheoloai(loai, danhsachhang);
 		for (MatHang hangHoa : dstimkiem) {
 			System.out
 					.println("Hang hoa: " + hangHoa.tenhanghoa + " - " + hangHoa.gianhapkho + " - " + hangHoa.ngaynhapkho);
